@@ -135,12 +135,13 @@ export function ResidencyModal() {
     fullName:
       touched.fullName && !form.fullName.trim() ? 'Full name is required.' : '',
     email:
-      (touched.email &&
-      (!form.email.trim()
-        ? 'Email is required.'
-        : !validateEmail(form.email)
-          ? 'Enter a valid email address.'
-          : '')) || '',
+      (touched.email
+        ? (!form.email.trim()
+            ? 'Email is required.'
+            : !validateEmail(form.email)
+              ? 'Enter a valid email address.'
+              : '')
+        : ''),
     phone:
       touched.phone && !form.phone.trim() ? 'Phone number is required.' : '',
     enrollmentType:
