@@ -206,16 +206,24 @@ export function ResidencyModal() {
     setSubmitting(true)
     setNetworkError(false)
     try {
-      const endpoint = import.meta.env.VITE_FORM_ENDPOINT
-      if (endpoint) {
-        await fetch(endpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-          },
-          body: JSON.stringify({ formType: 'RESIDENCY_APPLICATION', ...form }),
-        })
+      const endpoint =
+        import.meta.env.VITE_RESIDENCY_FORM_ENDPOINT ||
+        import.meta.env.VITE_FORM_ENDPOINT
+      if (!endpoint) {
+        setNetworkError(true)
+        return
+      }
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({ formType: 'RESIDENCY_APPLICATION', ...form }),
+      })
+      if (!response.ok) {
+        setNetworkError(true)
+        return
       }
       setSubmitted(true)
     } catch {
