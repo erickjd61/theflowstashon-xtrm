@@ -98,7 +98,7 @@ export function ClubModal() {
     fullName:
       touched.fullName && !form.fullName.trim() ? 'Full name is required.' : '',
     email:
-      touched.email &&
+      (touched.email &&
       (!form.email.trim()
         ? 'Email is required.'
         : !validateEmail(form.email)
@@ -124,7 +124,7 @@ export function ClubModal() {
     e.preventDefault()
     const allTouched: ClubTouchedState = Object.fromEntries(
       Object.keys(initialTouched).map((k) => [k, true]),
-    ) as ClubTouchedState
+    ) as unknown as ClubTouchedState
     setTouched(allTouched)
     const hasErrors =
       !form.fullName.trim() ||
@@ -608,14 +608,14 @@ function RadioDot({ selected, gold }: { selected: boolean; gold: string }) {
 }
 
 function RadioGroup({
-  name,
+  name: _name,
   value,
   options,
   onChange,
   gold,
   inline = false,
 }: {
-  name: string
+  name: string // eslint-disable-line @typescript-eslint/no-unused-vars
   value: string
   options: { value: string; label: string }[]
   onChange: (v: string) => void

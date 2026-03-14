@@ -135,12 +135,12 @@ export function ResidencyModal() {
     fullName:
       touched.fullName && !form.fullName.trim() ? 'Full name is required.' : '',
     email:
-      touched.email &&
+      (touched.email &&
       (!form.email.trim()
         ? 'Email is required.'
         : !validateEmail(form.email)
           ? 'Enter a valid email address.'
-          : ''),
+          : '')) || '',
     phone:
       touched.phone && !form.phone.trim() ? 'Phone number is required.' : '',
     enrollmentType:
@@ -186,7 +186,7 @@ export function ResidencyModal() {
     e.preventDefault()
     const allTouched: TouchedState = Object.fromEntries(
       Object.keys(initialTouched).map((k) => [k, true]),
-    ) as TouchedState
+    ) as unknown as TouchedState
     setTouched(allTouched)
     const hasErrors = Object.values({
       ...errors,
@@ -668,7 +668,7 @@ function Field({
 }
 
 function RadioGroup({
-  name,
+  name: _name,
   value,
   options,
   onChange,
