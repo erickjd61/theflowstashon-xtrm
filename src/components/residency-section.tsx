@@ -21,8 +21,8 @@ export function ResidencySection() {
     },
     {
       icon: '◈',
-      title: 'Weekly Adventure Experiences',
-      desc: 'Kayaking, outdoor challenges, and curated experiences that extend performance beyond the gym.',
+      title: 'State-of-the-Art Equipment',
+      desc: 'Every Residency cohort trains with Technogym — including a biometric check-up at the start and close of the program to track your transformation with precision.',
     },
     {
       icon: '◈',

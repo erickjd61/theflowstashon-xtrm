@@ -1,28 +1,38 @@
 export function CommunitySection() {
   const photos = [
     {
-      src: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80&fit=crop',
-      alt: 'Outdoor training session',
+      src: '/images/training-1.jpg',
+      alt: 'Training session — cable work and battle ropes',
       span: 'tall',
     },
     {
-      src: 'https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=800&q=80&fit=crop',
-      alt: 'Group workout on the water',
+      src: '/images/training-rooftop.jpg',
+      alt: 'Rooftop group training at sunrise',
       span: 'normal',
     },
     {
-      src: 'https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=800&q=80&fit=crop',
-      alt: 'Kayaking adventure',
+      src: '/images/training-2.jpg',
+      alt: 'Training session — dual workout',
       span: 'normal',
     },
     {
-      src: 'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=800&q=80&fit=crop',
-      alt: 'Beach training',
+      src: '/images/training-sled.jpg',
+      alt: 'Sled push at competition',
+      span: 'normal',
+    },
+    {
+      src: '/images/training-plates.jpg',
+      alt: 'Overhead plate press — partner training',
+      span: 'normal',
+    },
+    {
+      src: '/images/training-beach.jpg',
+      alt: 'Beach sprint training at sunset',
       span: 'wide',
     },
     {
-      src: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80&fit=crop',
-      alt: 'High performance session',
+      src: '/images/training-kayaking.jpg',
+      alt: 'Group kayaking through mangroves',
       span: 'normal',
     },
   ]
@@ -167,6 +177,7 @@ export function CommunitySection() {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
+                  objectPosition: 'center',
                   display: 'block',
                   filter: 'grayscale(15%) contrast(1.05)',
                   transition: 'transform 0.6s ease, filter 0.4s ease',

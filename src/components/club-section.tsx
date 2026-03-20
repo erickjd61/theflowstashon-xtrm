@@ -30,6 +30,12 @@ export function ClubSection() {
     },
   ]
 
+  const weeklyAdventure = {
+    icon: '◈',
+    title: 'Weekly Adventure Experiences',
+    desc: 'Kayaking, outdoor challenges, and curated experiences that extend performance beyond the gym.',
+  }
+
   const tiers = [
     {
       name: 'The Founding 20',
@@ -157,19 +163,93 @@ export function ClubSection() {
                 Mission.
               </em>
             </h2>
+            <div>
+              <p
+                style={{
+                  fontFamily: '"Syne", sans-serif',
+                  fontSize: '1rem',
+                  lineHeight: 1.8,
+                  color: 'rgba(245,240,232,0.6)',
+                  margin: '0 0 1.25rem',
+                }}
+              >
+                STASHON X is a nomadic membership for high-performance
+                individuals. No fixed gym. Every weekend, members receive a
+                location reveal 24–72 hours in advance and gather for a curated
+                fitness experience in an extraordinary Miami setting.
+              </p>
+              <p
+                style={{
+                  fontFamily: '"Syne", sans-serif',
+                  fontSize: '1rem',
+                  lineHeight: 1.8,
+                  color: 'rgba(245,240,232,0.6)',
+                  margin: 0,
+                }}
+              >
+                Members also gain access to the Secret Comms — an exclusive
+                network connecting Miami's most driven performers.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Weekly Adventure Feature Block */}
+        <div
+          style={{
+            border: '1px solid rgba(196,82,30,0.2)',
+            padding: '2.5rem',
+            marginBottom: '3rem',
+            display: 'flex',
+            gap: '2rem',
+            alignItems: 'flex-start',
+            transition: 'background 0.3s',
+            cursor: 'default',
+          }}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.background = 'rgba(196,82,30,0.05)')
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.background = 'transparent')
+          }
+        >
+          <div
+            style={{
+              fontFamily: '"Cormorant Garamond", serif',
+              fontSize: '1.8rem',
+              color: '#C4521E',
+              opacity: 0.8,
+              flexShrink: 0,
+              lineHeight: 1,
+              marginTop: '0.1rem',
+            }}
+          >
+            {weeklyAdventure.icon}
+          </div>
+          <div>
+            <h4
+              style={{
+                fontFamily: '"Syne", sans-serif',
+                fontWeight: 700,
+                fontSize: '0.82rem',
+                letterSpacing: '0.1em',
+                color: '#F5F0E8',
+                textTransform: 'uppercase',
+                margin: '0 0 0.75rem',
+              }}
+            >
+              {weeklyAdventure.title}
+            </h4>
             <p
               style={{
                 fontFamily: '"Syne", sans-serif',
-                fontSize: '1rem',
-                lineHeight: 1.8,
-                color: 'rgba(245,240,232,0.6)',
+                fontSize: '0.88rem',
+                lineHeight: 1.7,
+                color: 'rgba(245,240,232,0.5)',
                 margin: 0,
               }}
             >
-              STASHON X is a nomadic membership for high-performance
-              individuals. No fixed gym. Every weekend, members receive a
-              location reveal 24–72 hours in advance and gather for a curated
-              fitness experience in an extraordinary Miami setting.
+              {weeklyAdventure.desc}
             </p>
           </div>
         </div>

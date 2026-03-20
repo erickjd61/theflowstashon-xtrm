@@ -103,7 +103,7 @@ export function HeroSection() {
               textTransform: 'uppercase',
             }}
           >
-            Brickell, Miami — Est. 2025
+            Miami — Est. 2025
           </span>
         </div>
 

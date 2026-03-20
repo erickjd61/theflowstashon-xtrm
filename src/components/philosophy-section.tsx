@@ -27,7 +27,7 @@ export function PhilosophySection() {
         overflow: 'hidden',
       }}
     >
-      {/* Insignia watermark — right side, now using the light-gradient version */}
+      {/* Insignia watermark — right side */}
       <div
         style={{
           position: 'absolute',
@@ -91,7 +91,7 @@ export function PhilosophySection() {
                 textTransform: 'uppercase',
               }}
             >
-              The Methodology
+              The 80/20 Methodology
             </span>
           </div>
 
