@@ -1,3 +1,64 @@
+const linkStyle: React.CSSProperties = {
+  fontFamily: '"Syne", sans-serif',
+  fontWeight: 500,
+  fontSize: '0.75rem',
+  letterSpacing: '0.12em',
+  color: 'rgba(245,240,232,0.4)',
+  textDecoration: 'none',
+  textTransform: 'uppercase',
+  transition: 'color 0.2s',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '0.5rem',
+}
+
+const hoverOn = (e: React.MouseEvent<HTMLAnchorElement>) =>
+  (e.currentTarget.style.color = '#E8622A')
+const hoverOff = (e: React.MouseEvent<HTMLAnchorElement>) =>
+  (e.currentTarget.style.color = 'rgba(245,240,232,0.4)')
+
+const InstagramIcon = () => (
+  <svg
+    width="15"
+    height="15"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+  >
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <circle cx="12" cy="12" r="5" />
+    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
+  </svg>
+)
+
+const EmailIcon = () => (
+  <svg
+    width="15"
+    height="15"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+  >
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+    <polyline points="22,6 12,13 2,6" />
+  </svg>
+)
+
+const PhoneIcon = () => (
+  <svg
+    width="15"
+    height="15"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+  >
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12.09 19.79 19.79 0 0 1 1.11 3.53 2 2 0 0 1 3.09 1.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.27a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.28 16.92z" />
+  </svg>
+)
+
 export function SiteFooter() {
   return (
     <footer
@@ -7,12 +68,7 @@ export function SiteFooter() {
         borderTop: '1px solid rgba(196,82,30,0.18)',
       }}
     >
-      <div
-        style={{
-          maxWidth: '1400px',
-          margin: '0 auto',
-        }}
-      >
+      <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
         {/* Top row */}
         <div
           className="footer-top"
@@ -47,7 +103,7 @@ export function SiteFooter() {
                 textTransform: 'uppercase',
               }}
             >
-              Brickell, Miami
+              Miami
             </div>
           </div>
 
@@ -55,106 +111,77 @@ export function SiteFooter() {
           <div
             style={{
               display: 'flex',
-              gap: '2.5rem',
-              alignItems: 'center',
-              flexWrap: 'wrap',
+              flexDirection: 'column',
+              gap: '1rem',
             }}
           >
+            {/* Instagram — main */}
             <a
               href="https://instagram.com/theflowstashon"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                fontFamily: '"Syne", sans-serif',
-                fontWeight: 500,
-                fontSize: '0.75rem',
-                letterSpacing: '0.12em',
-                color: 'rgba(245,240,232,0.4)',
-                textDecoration: 'none',
-                textTransform: 'uppercase',
-                transition: 'color 0.2s',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#E8622A')}
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.color = 'rgba(245,240,232,0.4)')
-              }
+              style={linkStyle}
+              onMouseEnter={hoverOn}
+              onMouseLeave={hoverOff}
             >
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              >
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                <circle cx="12" cy="12" r="5" />
-                <circle
-                  cx="17.5"
-                  cy="6.5"
-                  r="1.5"
-                  fill="currentColor"
-                  stroke="none"
-                />
-              </svg>
+              <InstagramIcon />
               @theflowstashon
             </a>
 
+            {/* Instagram — Carla */}
             <a
-              href="mailto:hello@theflowstashon.com"
-              style={{
-                fontFamily: '"Syne", sans-serif',
-                fontWeight: 500,
-                fontSize: '0.75rem',
-                letterSpacing: '0.12em',
-                color: 'rgba(245,240,232,0.4)',
-                textDecoration: 'none',
-                textTransform: 'uppercase',
-                transition: 'color 0.2s',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#E8622A')}
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.color = 'rgba(245,240,232,0.4)')
-              }
+              href="https://instagram.com/carlaciddediego_official"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={linkStyle}
+              onMouseEnter={hoverOn}
+              onMouseLeave={hoverOff}
             >
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              >
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              hello@theflowstashon.com
+              <InstagramIcon />
+              @carlaciddediego_official
+            </a>
+
+            {/* Email */}
+            <a
+              href="mailto:hello@theflowstashonxtrm.com"
+              style={linkStyle}
+              onMouseEnter={hoverOn}
+              onMouseLeave={hoverOff}
+            >
+              <EmailIcon />
+              hello@theflowstashonxtrm.com
+            </a>
+
+            {/* Phone / Text / WhatsApp */}
+            <a
+              href="https://wa.me/15615609994"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={linkStyle}
+              onMouseEnter={hoverOn}
+              onMouseLeave={hoverOff}
+            >
+              <PhoneIcon />
+              +1 561-560-9994 &nbsp;·&nbsp; Call / Text / WhatsApp
             </a>
           </div>
 
-          {/* Insignia */}
+          {/* Insignia — new orange version */}
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-end',
-              gap: '0',
             }}
           >
             <img
-              src="/images/logo-insignia-white.png"
+              src="/images/insignia-orange.png"
               alt="TFLX Insignia"
               style={{
-                height: '52px',
+                height: '60px',
                 width: 'auto',
                 objectFit: 'contain',
-                opacity: 0.28,
+                opacity: 0.7,
               }}
             />
           </div>
@@ -180,7 +207,7 @@ export function SiteFooter() {
             textAlign: 'center',
           }}
         >
-          © 2025 THEFLOWSTASHON XTRM. All rights reserved. · Brickell, Miami
+          © 2025 THEFLOWSTASHON XTRM. All rights reserved. · Miami
         </div>
       </div>
 

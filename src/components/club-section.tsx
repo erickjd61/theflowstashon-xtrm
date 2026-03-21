@@ -5,10 +5,10 @@ export function ClubSection() {
 
   const missions = [
     {
-      emoji: '🌊',
+      emoji: '🏔',
       label: 'The Elements',
       tag: 'Mission 01',
-      desc: 'Secret beaches, sandbars, ocean plunges. Training where the Atlantic sets the tempo.',
+      desc: 'Secret beaches, parks, secluded hiking and biking trails, kayaking, paddle boards, tubing adventures, and more. Sand-resistance training, outdoor conditioning, and grounding — wherever nature takes us.',
     },
     {
       emoji: '🏙',

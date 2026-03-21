@@ -16,7 +16,7 @@ export function FoundersSection(): JSX.Element {
       title: 'Co-Founder | Master Behavioral Coach',
       credential: 'BFA Design & Marketing · 20+ Years Business Development',
       image: '/images/carla.jpg',
-      objectPosition: 'top center',
+      objectPosition: 'center 15%',
       bio: `Carla Cid de Diego is a Master Behavioral Coach with a BFA in Design and Marketing and over twenty years of experience building businesses from the ground up across industries. Bilingual in English and Spanish, she brings both the creative and strategic architecture to everything THEFLOWSTASHON XTRM delivers. Carla's work is rooted in a single insight: most people know exactly what they need to do — and still don't do it consistently. That gap between intention and action is her specialty. The 80/20 methodology at the heart of the residency is her design. She builds the mental systems that make Tashon's training sustainable — and turns participants not just into athletes, but into people who operate differently.`,
     },
   ]
