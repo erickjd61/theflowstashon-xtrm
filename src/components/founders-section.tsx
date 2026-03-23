@@ -4,12 +4,13 @@ export function FoundersSection(): JSX.Element {
   const founders = [
     {
       name: 'Tashon Marté',
-      title: 'Co-Founder | Lead Performance Coach',
+      title:
+        'Co-Founder & Master Performance Coach | ATHX Games World Champion — 40+ Division',
       credential:
         'BS Exercise Science & Kinesiology · Pro Hybrid Athlete Champion',
       image: '/images/tashon.jpg',
       objectPosition: 'top center',
-      bio: `Tashon Marté is a Pro Hybrid Athlete Champion and credentialed performance coach with a BS in Exercise Science and Kinesiology. A nationally recognized competitor, he has spent years studying how elite athletes build bodies that don't just perform — they endure. His training philosophy rejects specialization in favor of adaptability, which is why hybrid training is not a method he teaches but a discipline he lives. At THEFLOWSTASHON XTRM, Tashon is the physical standard. The proof of concept. Every program he builds is designed to develop well-rounded, resilient professionals who train with the same structure and intensity as the athletes he has competed alongside.`,
+      bio: `Tashon Marté is the ATHX Games World Champion in the 40+ division, representing the USA — proof that the XTRM methodology doesn't just build elite athletes, it builds the best in the world. Tashon Marté is a Pro Hybrid Athlete Champion and credentialed performance coach with a BS in Exercise Science and Kinesiology. A nationally recognized competitor, he has spent years studying how elite athletes build bodies that don't just perform — they endure. His training philosophy rejects specialization in favor of adaptability, which is why hybrid training is not a method he teaches but a discipline he lives. At THEFLOWSTASHON XTRM, Tashon is the physical standard. The proof of concept. Every program he builds is designed to develop well-rounded, resilient professionals who train with the same structure and intensity as the athletes he has competed alongside.`,
     },
     {
       name: 'Carla Cid de Diego',
