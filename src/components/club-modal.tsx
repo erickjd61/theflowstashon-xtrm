@@ -231,7 +231,7 @@ export function ClubModal() {
             <p style={{ fontSize: '1rem', color: '#AAAAAA', marginBottom: '2rem' }}>
               Your spot has been noted. Complete your membership payment below to confirm your place in Club STASHON X.
             </p>
-            
+            <a
               href="https://buy.stripe.com/5kQ9ALeA95fqdqh0o60Ba01"
               target="_blank"
               rel="noopener noreferrer"
