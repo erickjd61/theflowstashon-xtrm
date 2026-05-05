@@ -221,12 +221,41 @@ export function ClubModal() {
         </button>
 
         {submitted ? (
-          <SuccessMessage
-            headline="You're In."
-            body="Your spot has been noted. We'll be in touch shortly with next steps and your membership details."
-            muted="CLUB STASHON X · THEFLOWSTASHON XTRM"
-            gold={GOLD}
-          />
+          <div style={{ textAlign: 'center', padding: '2rem 1rem' }}>
+            <p style={{ fontSize: '0.75rem', letterSpacing: '0.15em', color: GOLD, marginBottom: '0.75rem' }}>
+              CLUB STASHON X · THEFLOWSTASHON XTRM
+            </p>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '1rem' }}>
+              You're In.
+            </h2>
+            <p style={{ fontSize: '1rem', color: '#AAAAAA', marginBottom: '2rem' }}>
+              Your spot has been noted. Complete your membership payment below to confirm your place in Club STASHON X.
+            </p>
+            
+              href="https://buy.stripe.com/5kQ9ALeA95fqdqh0o60Ba01"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'block',
+                width: '100%',
+                padding: '1rem',
+                backgroundColor: GOLD,
+                color: '#000000',
+                fontWeight: 700,
+                fontSize: '1rem',
+                textAlign: 'center',
+                textDecoration: 'none',
+                borderRadius: '4px',
+                marginBottom: '0.75rem',
+                letterSpacing: '0.05em',
+              }}
+            >
+              Complete Your Membership — Pay Now
+            </a>
+            <p style={{ fontSize: '0.75rem', color: '#666666' }}>
+              You will receive a confirmation receipt from Stripe after payment.
+            </p>
+          </div>
         ) : (
           <>
             {/* Header */}
