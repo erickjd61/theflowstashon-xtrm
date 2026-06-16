@@ -231,30 +231,78 @@ export function ClubModal() {
             <p style={{ fontSize: '1rem', color: '#AAAAAA', marginBottom: '2rem' }}>
               Your spot has been noted. Complete your membership payment below to confirm your place in STASHON X.
             </p>
-            <a
-              href="https://buy.stripe.com/5kQ9ALeA95fqdqh0o60Ba01"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'block',
-                width: '100%',
-                padding: '1rem',
-                backgroundColor: GOLD,
-                color: '#000000',
-                fontWeight: 700,
-                fontSize: '1rem',
-                textAlign: 'center',
-                textDecoration: 'none',
-                borderRadius: '4px',
-                marginBottom: '0.75rem',
-                letterSpacing: '0.05em',
-              }}
-            >
-              Complete Your Membership — Pay Now
-            </a>
-            <p style={{ fontSize: '0.75rem', color: '#666666' }}>
-              You will receive a confirmation receipt from Stripe after payment.
-            </p>
+            {form.membershipTier === 'standard' ? (
+              <div
+                style={{
+                  border: `1px solid ${BORDER}`,
+                  padding: '1.25rem',
+                  marginBottom: '0.75rem',
+                  textAlign: 'left',
+                }}
+              >
+                <p style={{ fontSize: '0.95rem', color: '#F5F0E8', margin: '0 0 0.5rem', fontWeight: 600 }}>
+                  Your Standard membership is reserved.
+                </p>
+                <p style={{ fontSize: '0.85rem', color: '#AAAAAA', margin: 0, lineHeight: 1.6 }}>
+                  We’ll email your secure payment link to confirm your place. Questions?{' '}
+                  <a href="mailto:hello@theflowstashonxtrm.com" style={{ color: GOLD, textDecoration: 'none' }}>
+                    hello@theflowstashonxtrm.com
+                  </a>
+                </p>
+              </div>
+            ) : (
+              <>
+                <p style={{ fontSize: '0.72rem', letterSpacing: '0.14em', color: '#AAAAAA', textTransform: 'uppercase', marginBottom: '0.9rem' }}>
+                  Choose how to pay
+                </p>
+                <a
+                  href="https://buy.stripe.com/28E3cn1Nn8rCgCt0o60Ba03"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'block',
+                    width: '100%',
+                    padding: '1rem',
+                    backgroundColor: GOLD,
+                    color: '#000000',
+                    fontWeight: 700,
+                    fontSize: '1rem',
+                    textAlign: 'center',
+                    textDecoration: 'none',
+                    boxSizing: 'border-box',
+                    letterSpacing: '0.05em',
+                    marginBottom: '0.6rem',
+                  }}
+                >
+                  Pay Annually — $1,750 / year
+                </a>
+                <a
+                  href="https://buy.stripe.com/5kQ9ALeA95fqdqh0o60Ba01"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'block',
+                    width: '100%',
+                    padding: '1rem',
+                    background: 'transparent',
+                    border: `1.5px solid ${GOLD}`,
+                    color: GOLD,
+                    fontWeight: 700,
+                    fontSize: '1rem',
+                    textAlign: 'center',
+                    textDecoration: 'none',
+                    boxSizing: 'border-box',
+                    letterSpacing: '0.05em',
+                    marginBottom: '0.75rem',
+                  }}
+                >
+                  Pay Monthly — $149 / month
+                </a>
+                <p style={{ fontSize: '0.75rem', color: '#666666' }}>
+                  You will receive a confirmation receipt from Stripe after payment.
+                </p>
+              </>
+            )}
             <div style={{ borderTop: '1px solid #222', marginTop: '2rem', paddingTop: '1.75rem' }}>
               <p style={{ fontSize: '0.7rem', letterSpacing: '0.18em', color: GOLD, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
                 ◈ The Secret Comms
