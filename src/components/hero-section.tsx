@@ -1,7 +1,7 @@
 import { useModal } from './modal-context'
 
 export function HeroSection() {
-  const { openResidency, openClub } = useModal()
+  const { openResidency } = useModal()
 
   return (
     <section
@@ -179,9 +179,10 @@ export function HeroSection() {
           >
             Apply for the Residency
           </button>
-          <button
-            onClick={openClub}
+          <a
+            href="/club"
             style={{
+              textDecoration: 'none',
               fontFamily: '"Syne", sans-serif',
               fontWeight: 700,
               fontSize: '0.78rem',
@@ -207,7 +208,7 @@ export function HeroSection() {
             }}
           >
             Join STASHON X
-          </button>
+          </a>
         </div>
 
         {/* Scroll indicator */}
