@@ -1,7 +1,7 @@
 import { useModal } from './modal-context'
 
 export function FinalCtaSection() {
-  const { openResidency, openClub } = useModal()
+  const { openResidency } = useModal()
 
   return (
     <section
@@ -174,9 +174,10 @@ export function FinalCtaSection() {
           >
             Apply for the Residency
           </button>
-          <button
-            onClick={openClub}
+          <a
+            href="/club"
             style={{
+              textDecoration: 'none',
               fontFamily: '"Syne", sans-serif',
               fontWeight: 700,
               fontSize: '0.78rem',
@@ -202,7 +203,7 @@ export function FinalCtaSection() {
             }}
           >
             Join STASHON X
-          </button>
+          </a>
         </div>
 
         {/* Fine print */}

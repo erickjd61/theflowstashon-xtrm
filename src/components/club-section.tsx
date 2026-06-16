@@ -1,8 +1,4 @@
-import { useModal } from './modal-context'
-
 export function ClubSection() {
-  const { openClub } = useModal()
-
   const missions = [
     {
       emoji: '🏔',
@@ -497,12 +493,14 @@ export function ClubSection() {
                   ))}
                 </div>
 
-                <button
-                  onClick={openClub}
+                <a
+                  href="/club"
                   style={{
                     display: 'block',
                     width: '100%',
                     textAlign: 'center',
+                    textDecoration: 'none',
+                    boxSizing: 'border-box',
                     fontFamily: '"Syne", sans-serif',
                     fontWeight: 700,
                     fontSize: '0.75rem',
@@ -536,7 +534,7 @@ export function ClubSection() {
                   }}
                 >
                   {tier.cta}
-                </button>
+                </a>
               </div>
             ))}
           </div>
@@ -544,9 +542,10 @@ export function ClubSection() {
 
         {/* Club CTA */}
         <div style={{ textAlign: 'center' }}>
-          <button
-            onClick={openClub}
+          <a
+            href="/club"
             style={{
+              textDecoration: 'none',
               fontFamily: '"Syne", sans-serif',
               fontWeight: 700,
               fontSize: '0.78rem',
@@ -572,7 +571,7 @@ export function ClubSection() {
             }}
           >
             Join STASHON X<span style={{ fontSize: '1rem' }}>→</span>
-          </button>
+          </a>
         </div>
       </div>
 
