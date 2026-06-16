@@ -39,10 +39,10 @@ export function ClubSection() {
   const tiers = [
     {
       name: 'The Founding 20',
-      price: '$149',
-      period: '/month',
-      note: 'Locked rate — first 20 members only',
-      launch: 'Launching March 14',
+      price: '$1,750',
+      period: '/year',
+      note: 'or $149/month — first 20 members only',
+      launch: null,
       features: [
         '4 Weekend Missions / month',
         'Secret Comms network',
@@ -53,10 +53,10 @@ export function ClubSection() {
       cta: 'Secure Your Spot',
     },
     {
-      name: 'Standard Membership',
-      price: '$199',
-      period: '/month',
-      note: null,
+      name: 'Regular Membership',
+      price: '$2,200',
+      period: '/year',
+      note: 'or $199/month',
       launch: null,
       features: [
         '4 Weekend Missions / month',
@@ -66,21 +66,6 @@ export function ClubSection() {
       ],
       highlight: false,
       cta: 'Join STASHON X',
-    },
-    {
-      name: 'Residency Alumni',
-      price: '$129',
-      period: '/month',
-      note: 'Exclusive alumni rate',
-      launch: null,
-      features: [
-        'Everything in Standard',
-        'Alumni-locked pricing',
-        'Complimentary access during 8-week residency',
-        'Priority cohort referral',
-      ],
-      highlight: false,
-      cta: 'Graduate First',
     },
   ]
 
@@ -135,7 +120,7 @@ export function ClubSection() {
                 textTransform: 'uppercase',
               }}
             >
-              Club STASHON X
+              STASHON X
             </span>
           </div>
           <div
@@ -357,7 +342,7 @@ export function ClubSection() {
             className="tiers-grid"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
+              gridTemplateColumns: 'repeat(2, 1fr)',
               gap: '1.5rem',
             }}
           >
@@ -586,7 +571,7 @@ export function ClubSection() {
               e.currentTarget.style.color = '#F5F0E8'
             }}
           >
-            Join Club STASHON X<span style={{ fontSize: '1rem' }}>→</span>
+            Join STASHON X<span style={{ fontSize: '1rem' }}>→</span>
           </button>
         </div>
       </div>

@@ -201,7 +201,7 @@ export function FinalCtaSection() {
               e.currentTarget.style.transform = 'translateY(0)'
             }}
           >
-            Join Club STASHON X
+            Join STASHON X
           </button>
         </div>
 

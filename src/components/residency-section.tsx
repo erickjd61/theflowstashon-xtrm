@@ -145,7 +145,7 @@ export function ResidencySection() {
                 fontStyle: 'italic',
               }}
             >
-              Graduates transition automatically into Club STASHON X.
+              Graduates transition automatically into STASHON X.
             </p>
           </div>
         </div>

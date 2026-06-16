@@ -14,7 +14,7 @@ export function Navbar() {
     { label: 'Philosophy', href: '#philosophy' },
     { label: 'Founders', href: '#founders' },
     { label: 'Residency', href: '#residency' },
-    { label: 'Club STASHON X', href: '#club' },
+    { label: 'STASHON X', href: '#club' },
   ]
 
   return (

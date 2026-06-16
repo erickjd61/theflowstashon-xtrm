@@ -166,7 +166,7 @@ export function ClubModal() {
       onClick={handleOverlayClick}
       role="dialog"
       aria-modal="true"
-      aria-label="Club STASHON X Application"
+      aria-label="STASHON X Application"
       style={{
         position: 'fixed',
         inset: 0,
@@ -223,13 +223,13 @@ export function ClubModal() {
         {submitted ? (
           <div style={{ textAlign: 'center', padding: '2rem 1rem' }}>
             <p style={{ fontSize: '0.75rem', letterSpacing: '0.15em', color: GOLD, marginBottom: '0.75rem' }}>
-              CLUB STASHON X · THEFLOWSTASHON XTRM
+              STASHON X · THEFLOWSTASHON XTRM
             </p>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '1rem' }}>
               You're In.
             </h2>
             <p style={{ fontSize: '1rem', color: '#AAAAAA', marginBottom: '2rem' }}>
-              Your spot has been noted. Complete your membership payment below to confirm your place in Club STASHON X.
+              Your spot has been noted. Complete your membership payment below to confirm your place in STASHON X.
             </p>
             <a
               href="https://buy.stripe.com/5kQ9ALeA95fqdqh0o60Ba01"
@@ -259,8 +259,8 @@ export function ClubModal() {
         ) : (
           <>
             {/* Header */}
-            <p style={eyebrowStyle(GOLD)}>CLUB STASHON X</p>
-            <h2 style={headlineStyle}>Join Club STASHON X</h2>
+            <p style={eyebrowStyle(GOLD)}>STASHON X</p>
+            <h2 style={headlineStyle}>Join STASHON X</h2>
             <p style={subtextStyle}>
               The Founding 20 rate is $149/month — locked for life. Once they're
               gone, standard membership is $199/month. Enter your information to
@@ -405,7 +405,7 @@ export function ClubModal() {
                             letterSpacing: '0.1em',
                           }}
                         >
-                          LOCKED RATE · LAUNCHING MARCH 14 · ALMOST GONE
+                          LOCKED RATE · ALMOST GONE
                         </div>
                       </div>
                     </div>
@@ -495,7 +495,7 @@ export function ClubModal() {
                 />
               </Field>
 
-              <Field label="What draws you to Club STASHON X? (optional)">
+              <Field label="What draws you to STASHON X? (optional)">
                 <textarea
                   value={form.drawsYou}
                   onChange={(e) =>
