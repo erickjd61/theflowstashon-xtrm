@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { ModalProvider, useModal } from '@/components/modal-context'
 import { ClubModal } from '@/components/club-modal'
@@ -251,6 +252,17 @@ const tiers = [
 
 function ClubContent() {
   const { openClub } = useModal()
+
+  useEffect(() => {
+    const id = 'snapwidget-js'
+    if (!document.getElementById(id)) {
+      const s = document.createElement('script')
+      s.id = id
+      s.src = 'https://snapwidget.com/js/snapwidget.js'
+      s.async = true
+      document.body.appendChild(s)
+    }
+  }, [])
 
   return (
     <div style={{ background: BLACK, color: CREAM, minHeight: '100vh' }}>
@@ -710,13 +722,16 @@ function ClubContent() {
           </div>
           <div style={{ border: `1px solid ${HAIR}`, padding: 'clamp(1.4rem, 3vw, 2.2rem)' }}>
             <span style={eyebrow}>In The Field · @STASHONX</span>
-            <div style={{ border: `1px dashed ${HAIR}`, minHeight: '260px', display: 'grid', placeItems: 'center', textAlign: 'center', padding: '2rem', marginTop: '1.4rem', background: 'rgba(245,240,232,0.02)' }}>
-              <div>
-                <div style={{ fontFamily: SERIF, fontSize: '1.3rem', color: CREAM }}>Instagram feed</div>
-                <div style={{ fontFamily: SANS, fontSize: '0.66rem', letterSpacing: '0.08em', color: FAINT, marginTop: '0.7rem', maxWidth: '34ch', lineHeight: 1.5 }}>
-                  SnapWidget embed of @STASHONX — posting to Instagram updates the site.
-                </div>
-              </div>
+            <div style={{ marginTop: '1.4rem' }}>
+              <iframe
+                src="https://snapwidget.com/embed/1125410"
+                title="STASHON X Club Feed"
+                className="snapwidget-widget"
+                allowTransparency={true}
+                frameBorder="0"
+                scrolling="no"
+                style={{ border: 'none', overflow: 'hidden', width: '100%', minHeight: '340px', display: 'block' }}
+              />
             </div>
           </div>
         </div>
