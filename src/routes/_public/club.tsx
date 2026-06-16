@@ -142,11 +142,11 @@ const blackOps = [
 ]
 
 const partners = [
-  'East Coast Marketplace',
-  'THEFLOWSTASHON XTRM',
-  'PADL Miami',
-  'Las Terrazas at The Hyde',
-  'Sixty Vines',
+  { name: 'East Coast Marketplace', src: '/partners/eastcoast.png' },
+  { name: 'Super Groovy Travels', src: '/partners/supergroovy.png' },
+  { name: 'PADL Miami', src: '/partners/padl.png' },
+  { name: 'Las Terrazas at The Hyde', src: '/partners/terrazas.png' },
+  { name: 'Sixty Vines', src: '/partners/sixty.png' },
 ]
 
 const galicia = [
@@ -522,13 +522,22 @@ function ClubContent() {
           </div>
 
           {/* Partners */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0.8rem 0.9rem', marginTop: '2.6rem' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0.7rem 0.8rem', marginTop: '2.6rem' }}>
             <span style={{ fontFamily: SANS, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontSize: '0.62rem', color: FAINT, marginRight: '0.6rem' }}>
               In partnership with
             </span>
             {partners.map((p) => (
-              <span key={p} style={{ fontFamily: SANS, fontWeight: 600, letterSpacing: '0.06em', fontSize: '0.74rem', color: DIM, padding: '0.55rem 0.9rem', border: `1px solid ${HAIR_SOFT}`, background: 'rgba(245,240,232,0.03)' }}>
-                {p}
+              <span
+                key={p.name}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  background: CREAM,
+                  border: `1px solid ${HAIR}`,
+                  padding: '0.55rem 1.05rem',
+                }}
+              >
+                <img src={p.src} alt={p.name} style={{ height: '46px', width: 'auto', display: 'block' }} />
               </span>
             ))}
           </div>
