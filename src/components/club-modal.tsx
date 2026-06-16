@@ -255,6 +255,35 @@ export function ClubModal() {
             <p style={{ fontSize: '0.75rem', color: '#666666' }}>
               You will receive a confirmation receipt from Stripe after payment.
             </p>
+            <div style={{ borderTop: '1px solid #222', marginTop: '2rem', paddingTop: '1.75rem' }}>
+              <p style={{ fontSize: '0.7rem', letterSpacing: '0.18em', color: GOLD, textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+                ◈ The Secret Comms
+              </p>
+              <p style={{ fontSize: '0.9rem', color: '#AAAAAA', marginBottom: '1.1rem', lineHeight: 1.6 }}>
+                Once your membership is confirmed, step inside the private members’ community.
+              </p>
+              <a
+                href="https://chat.whatsapp.com/CkqauIDPKbI5cKapq9Y8lL"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'block',
+                  width: '100%',
+                  padding: '0.95rem',
+                  border: `1.5px solid ${GOLD}`,
+                  color: GOLD,
+                  background: 'transparent',
+                  fontWeight: 700,
+                  fontSize: '0.95rem',
+                  textAlign: 'center',
+                  textDecoration: 'none',
+                  letterSpacing: '0.05em',
+                  boxSizing: 'border-box',
+                }}
+              >
+                Join the WhatsApp Community
+              </a>
+            </div>
           </div>
         ) : (
           <>
