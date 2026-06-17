@@ -123,23 +123,19 @@ function Chip({ children }: { children: React.ReactNode }) {
 }
 
 const weekly = [
-  'Kayaking',
-  'Paddleboarding',
-  'Beach bootcamps',
-  'Sunset yoga',
-  'Trail biking',
-  'Park picnics',
-  'Sound healing in nature',
-  'Sunset Market · Virginia Key',
+  'Kayaking & Paddleboarding',
+  'Beach Bootcamps & Trail Biking',
+  'Sunset Yoga & Sound Healing in Nature',
+  'Park Picnics & Community Gatherings',
+  'Sunset Market Activation · Virginia Key',
 ]
 
 const blackOps = [
-  'Horseback excursions',
-  'Wakeboarding lessons',
-  'Kite surfing',
-  'Yacht day in the bay',
-  'ATV racing · Everglades',
-  'Snorkeling · the Keys',
+  'Horseback Mountain Excursions',
+  'Wakeboarding & Kite Surfing Lessons',
+  'Private Yacht Days in the Bay',
+  'ATV Racing · The Everglades',
+  'Coral Reef Snorkeling · The Keys',
 ]
 
 const partners = [
@@ -388,13 +384,13 @@ function ClubContent() {
             },
             {
               n: '◈ II',
-              t: 'The Unmasking',
-              body: 'Miami is full of masks: the suits, the heels, the polished networking, the titles that leave us isolated. STASHON X is the antidote. We trade the handshake for the high-five and the societal armor for the nomadic heart. No pretense — just the blank canvas of our rawest selves meeting nature in its wildest form.',
+              t: 'The Unmasking & Connection',
+              body: 'Miami is full of masks: the suits, the heels, the polished networking, and the corporate titles that ultimately leave us isolated. STASHON X is the antidote. We trade the formal handshake for the high-five, breaking free from conventional settings to return to the wild, where we connect soul to soul in nature’s rawest embrace. Here, we shed our societal armor to laugh, explore, and run wild under the open sky—rediscovering the simplest, most profound joys of life to forge true, lifelong friendships and architect unforgettable moments together.',
             },
             {
               n: '◈ III',
               t: 'The Duality: Mind, Body & Wild',
-              body: 'Business is the engine, but adventure is the soul. We unite high-performance wellness with radical exploration. Led by the world’s #1 Hybrid Athlete (40+) and a Master Visionary Strategist, we train the body to be capable of any adventure the spirit demands.',
+              body: 'Business is the engine, but adventure is the soul. We unite high-vibe human connection with radical, unconventional exploration. Guided by the world’s #1 Hybrid Athlete (40+) and a Master Visionary Strategist, we train the body out in the open air—on hidden beaches, mountain trails, and wild canvases—ensuring your physical capability matches whatever adventure your spirit demands.',
             },
           ].map((row) => (
             <div
@@ -490,8 +486,8 @@ function ClubContent() {
         <div style={{ maxWidth: '1320px', margin: '0 auto' }}>
           <span style={eyebrow}>Experiences & Adventures</span>
           <h2 style={{ fontFamily: SERIF, fontWeight: 600, fontSize: 'clamp(2.1rem, 5vw, 3.6rem)', lineHeight: 1.05, margin: '1rem 0 2.6rem', maxWidth: '16ch' }}>
-            An open door, and a door that stays{' '}
-            <em style={{ fontStyle: 'italic', color: TERRA }}>shut.</em>
+            One curated ecosystem. Endless ways to{' '}
+            <em style={{ fontStyle: 'italic', color: TERRA }}>live.</em>
           </h2>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1px', background: HAIR_SOFT, border: `1px solid ${HAIR}` }}>
@@ -499,10 +495,10 @@ function ClubContent() {
             <div style={{ background: BLACK, padding: 'clamp(1.8rem, 3.5vw, 3rem)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', alignItems: 'baseline' }}>
                 <div style={{ fontFamily: SERIF, fontSize: 'clamp(1.7rem, 3vw, 2.4rem)', fontWeight: 600 }}>Weekly Adventures</div>
-                <div style={{ fontFamily: SANS, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontSize: '0.66rem', color: TERRA }}>◈ Weekends · Included</div>
+                <div style={{ fontFamily: SANS, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontSize: '0.66rem', color: TERRA }}>◈ Weekends · 100% Included in Membership</div>
               </div>
               <p style={{ fontFamily: SERIF, fontSize: '1.2rem', color: DIM, marginTop: '0.8rem', maxWidth: '60ch' }}>
-                Low-cost, high-frequency, open to every member. The rhythm of the club — show up, move, connect.
+                Zero-friction, high-frequency, and fully curated for our tribe. This is the heartbeat of the club—you simply show up, move, and connect.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.55rem', marginTop: '1.6rem' }}>
                 {weekly.map((w) => (
@@ -511,24 +507,23 @@ function ClubContent() {
               </div>
             </div>
             {/* Black Ops */}
-            <div className="ops" style={{ background: BLACK, padding: 'clamp(1.8rem, 3.5vw, 3rem)' }}>
+            <div style={{ background: BLACK, padding: 'clamp(1.8rem, 3.5vw, 3rem)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', alignItems: 'baseline' }}>
-                <div style={{ fontFamily: SERIF, fontSize: 'clamp(1.7rem, 3vw, 2.4rem)', fontWeight: 600 }}>Black Ops</div>
-                <div style={{ fontFamily: SANS, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontSize: '0.66rem', color: FAINT }}>◈ VIP · Members’ rate</div>
+                <div style={{ fontFamily: SERIF, fontSize: 'clamp(1.7rem, 3vw, 2.4rem)', fontWeight: 600 }}>Black Ops — Signature Expeditions</div>
+                <div style={{ fontFamily: SANS, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontSize: '0.66rem', color: FAINT }}>◈ VIP Curation · Exclusive Members’ Rate</div>
               </div>
               <p style={{ fontFamily: SERIF, fontSize: '1.2rem', color: DIM, marginTop: '0.8rem', maxWidth: '60ch' }}>
-                VIP excursions, unlocked at a discounted member fee per adventure. Details surface when it’s time to move.{' '}
-                <em style={{ fontStyle: 'italic', color: TERRA }}>Hover to unmask.</em>
+                Premium, high-adrenaline excursions unlocked at a heavily discounted member fee. These are our larger, signature getaways designed to push boundaries and create unforgettable memories.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.55rem', marginTop: '1.6rem' }}>
                 {blackOps.map((b) => (
-                  <span key={b} className="ops-chip" style={{ fontFamily: SANS, fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.04em', padding: '0.5rem 0.9rem', border: `1px solid ${HAIR_SOFT}`, color: DIM }}>
+                  <span key={b} style={{ fontFamily: SANS, fontWeight: 600, fontSize: '0.72rem', letterSpacing: '0.04em', padding: '0.5rem 0.9rem', border: `1px solid ${HAIR_SOFT}`, color: DIM }}>
                     {b}
                   </span>
                 ))}
               </div>
               <div style={{ fontFamily: SANS, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', fontSize: '0.64rem', color: FAINT, marginTop: '1.4rem' }}>
-                <b style={{ color: TERRA }}>Members only.</b> Discounted per-adventure pricing revealed inside the circle.
+                <b style={{ color: TERRA }}>Members Only:</b> Discounted per-adventure pricing and private itineraries are revealed exclusively inside the circle.
               </div>
             </div>
           </div>
@@ -559,6 +554,15 @@ function ClubContent() {
       {/* GALICIA */}
       <section id="galicia" style={{ padding: 'clamp(4.5rem, 10vw, 9rem) clamp(1.4rem, 5vw, 7rem)', background: 'linear-gradient(180deg, #060606, #0c0b0a)' }}>
         <div style={{ maxWidth: '1320px', margin: '0 auto' }}>
+          <div style={{ marginBottom: 'clamp(2.6rem, 5vw, 4rem)', maxWidth: '60ch' }}>
+            <span style={eyebrow}>◈ Exclusive Booking</span>
+            <h2 style={{ fontFamily: SERIF, fontWeight: 600, fontSize: 'clamp(2.1rem, 5vw, 3.6rem)', lineHeight: 1.05, margin: '1rem 0 0' }}>
+              The <em style={{ fontStyle: 'italic', color: TERRA }}>Global Escapes</em>
+            </h2>
+            <p style={{ fontFamily: SERIF, fontSize: 'clamp(1.3rem, 2vw, 1.6rem)', color: CREAM, lineHeight: 1.5, marginTop: '1.2rem' }}>
+              Pack your bags. Gain priority access to our one-of-a-kind, international, bucket-list expeditions.
+            </p>
+          </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2.4rem' }}>
             <span style={{ fontFamily: SANS, fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', fontSize: '0.66rem', color: BLACK, background: TERRA, padding: '0.5rem 0.85rem' }}>
               ◈ Now Available
@@ -766,9 +770,6 @@ function ClubContent() {
       </footer>
 
       <style>{`
-        .ops .ops-chip { color: transparent; position: relative; }
-        .ops .ops-chip { transition: color 0.35s; }
-        .ops:hover .ops-chip { color: ${DIM}; }
         @media (max-width: 900px) {
           .gal-grid { grid-template-columns: 1fr !important; }
           .plans { grid-template-columns: 1fr !important; }
