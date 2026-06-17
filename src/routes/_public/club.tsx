@@ -105,12 +105,15 @@ function GhostButton({
 }
 
 const adventureSlides = [
-  { src: '/adventures/atv-racing.jpg', cap: 'ATV Racing · The Everglades' },
-  { src: '/adventures/horseback-water.jpg', cap: 'Horseback on the Water' },
-  { src: '/adventures/jet-ski-dolphins.jpg', cap: 'Jet Ski with Dolphins' },
-  { src: '/adventures/parasailing.jpg', cap: 'Parasailing the Coast' },
-  { src: '/adventures/coral-snorkeling.jpg', cap: 'Coral Reef Snorkeling · The Keys' },
-  { src: '/adventures/island-camping.jpg', cap: 'Island Camping' },
+  { src: '/adventures/atv-racing.jpg', cap: 'ATV Racing · The Everglades', pos: 'center' },
+  { src: '/adventures/boat-day-skyline.jpg', cap: 'Boat Day · Miami Skyline', pos: 'center' },
+  { src: '/adventures/horseback-water.jpg', cap: 'Horseback on the Water', pos: 'center' },
+  { src: '/adventures/jet-ski-dolphins.jpg', cap: 'Jet Ski with Dolphins', pos: 'center' },
+  { src: '/adventures/parasailing.jpg', cap: 'Parasailing the Coast', pos: 'center' },
+  { src: '/adventures/coral-snorkeling.jpg', cap: 'Coral Reef Snorkeling · The Keys', pos: 'center' },
+  { src: '/adventures/boat-day.jpg', cap: 'Boat Day · Biscayne Bay', pos: 'center' },
+  { src: '/adventures/island-camping.jpg', cap: 'Island Camping', pos: 'center' },
+  { src: '/adventures/sunset-paddle.jpg', cap: 'Sunset Paddle · Miami', pos: 'center 72%' },
 ]
 
 function AdventureCarousel() {
@@ -158,6 +161,7 @@ function AdventureCarousel() {
               width: '100%',
               height: '100%',
               objectFit: 'cover',
+              objectPosition: s.pos,
               opacity: idx === i ? 1 : 0,
               transition: 'opacity 0.9s ease',
             }}
