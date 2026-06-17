@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { ModalProvider, useModal } from '@/components/modal-context'
 import { ClubModal } from '@/components/club-modal'
@@ -101,6 +101,110 @@ function GhostButton({
     <button onClick={onClick} style={style}>
       {children}
     </button>
+  )
+}
+
+const adventureSlides = [
+  { src: '/adventures/atv-racing.jpg', cap: 'ATV Racing · The Everglades' },
+  { src: '/adventures/horseback-water.jpg', cap: 'Horseback on the Water' },
+  { src: '/adventures/jet-ski-dolphins.jpg', cap: 'Jet Ski with Dolphins' },
+  { src: '/adventures/parasailing.jpg', cap: 'Parasailing the Coast' },
+  { src: '/adventures/coral-snorkeling.jpg', cap: 'Coral Reef Snorkeling · The Keys' },
+  { src: '/adventures/island-camping.jpg', cap: 'Island Camping' },
+]
+
+function AdventureCarousel() {
+  const [i, setI] = useState(0)
+  const n = adventureSlides.length
+
+  useEffect(() => {
+    const t = setInterval(() => setI((p) => (p + 1) % n), 5000)
+    return () => clearInterval(t)
+  }, [n])
+
+  const arrow: React.CSSProperties = {
+    position: 'absolute',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    zIndex: 4,
+    width: '38px',
+    height: '38px',
+    borderRadius: '50%',
+    border: `1px solid ${HAIR}`,
+    background: 'rgba(6,6,6,0.55)',
+    color: CREAM,
+    fontSize: '1.3rem',
+    lineHeight: 1,
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+
+  return (
+    <div style={{ marginTop: '1.8rem' }}>
+      <div style={{ fontFamily: SANS, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', fontSize: '0.62rem', color: TERRA, marginBottom: '0.8rem' }}>
+        ◈ Signature expeditions in motion
+      </div>
+      <div style={{ position: 'relative', overflow: 'hidden', border: `1px solid ${HAIR}`, aspectRatio: '16 / 9', background: '#000' }}>
+        {adventureSlides.map((s, idx) => (
+          <img
+            key={s.src}
+            src={s.src}
+            alt={s.cap}
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              opacity: idx === i ? 1 : 0,
+              transition: 'opacity 0.9s ease',
+            }}
+          />
+        ))}
+        <div
+          style={{
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: 3,
+            padding: '1.4rem 1.3rem 1rem',
+            background: 'linear-gradient(0deg, rgba(6,6,6,0.85), transparent)',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'flex-end',
+            gap: '1rem',
+          }}
+        >
+          <span style={{ fontFamily: SANS, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontSize: '0.66rem', color: CREAM }}>
+            {adventureSlides[i].cap}
+          </span>
+          <div style={{ display: 'flex', gap: '0.4rem' }}>
+            {adventureSlides.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setI(idx)}
+                aria-label={`Go to slide ${idx + 1}`}
+                style={{
+                  width: idx === i ? '20px' : '7px',
+                  height: '7px',
+                  borderRadius: '4px',
+                  border: 'none',
+                  padding: 0,
+                  cursor: 'pointer',
+                  background: idx === i ? TERRA : 'rgba(245,240,232,0.45)',
+                  transition: 'all 0.3s ease',
+                }}
+              />
+            ))}
+          </div>
+        </div>
+        <button onClick={() => setI((p) => (p - 1 + n) % n)} aria-label="Previous" style={{ ...arrow, left: '0.7rem' }}>‹</button>
+        <button onClick={() => setI((p) => (p + 1) % n)} aria-label="Next" style={{ ...arrow, right: '0.7rem' }}>›</button>
+      </div>
+    </div>
   )
 }
 
@@ -525,6 +629,7 @@ function ClubContent() {
               <div style={{ fontFamily: SANS, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', fontSize: '0.64rem', color: FAINT, marginTop: '1.4rem' }}>
                 <b style={{ color: TERRA }}>Members Only:</b> Discounted per-adventure pricing and private itineraries are revealed exclusively inside the circle.
               </div>
+              <AdventureCarousel />
             </div>
           </div>
 
