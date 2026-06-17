@@ -503,6 +503,7 @@ function ClubContent() {
           ].map((row) => (
             <div
               key={row.t}
+              className="creed-row"
               style={{
                 display: 'grid',
                 gridTemplateColumns: 'minmax(180px, 240px) 1fr',
@@ -531,7 +532,7 @@ function ClubContent() {
           ))}
 
           {/* Trajectory */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(180px, 240px) 1fr', gap: 'clamp(1.5rem, 4vw, 5rem)', padding: 'clamp(2.2rem, 4vw, 3.2rem) 0', borderTop: `1px solid ${HAIR}`, borderBottom: `1px solid ${HAIR}` }}>
+          <div className="creed-row" style={{ display: 'grid', gridTemplateColumns: 'minmax(180px, 240px) 1fr', gap: 'clamp(1.5rem, 4vw, 5rem)', padding: 'clamp(2.2rem, 4vw, 3.2rem) 0', borderTop: `1px solid ${HAIR}`, borderBottom: `1px solid ${HAIR}` }}>
             <div>
               <div style={{ fontFamily: SANS, fontWeight: 700, letterSpacing: '0.14em', fontSize: '0.72rem', color: TERRA }}>◈ IV</div>
               <div style={{ fontFamily: SERIF, fontSize: 'clamp(1.4rem, 2.4vw, 2rem)', fontWeight: 600, marginTop: '0.5rem', lineHeight: 1.1 }}>The Evolutionary Trajectory</div>
@@ -880,6 +881,7 @@ function ClubContent() {
 
       <style>{`
         @media (max-width: 900px) {
+          .creed-row { grid-template-columns: 1fr !important; gap: 0.6rem !important; }
           .gal-grid { grid-template-columns: 1fr !important; }
           .plans { grid-template-columns: 1fr !important; }
           .util { grid-template-columns: 1fr !important; }
